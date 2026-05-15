@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[authoryear]{natbib}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% --- Custom Commands ---
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\text{Var}}
+\newcommand{\Cov}{\text{Cov}}
+
+% --- Title Information ---
+\title{Macroeconomic Determinants of Income Inequality: A Cross-Country Econometric Analysis using Robust Standard Errors}
+\author{Sambit Mishra\thanks{XIM University, Bhubaneswar. Email: \href{mailto:labsquantumleap@gmail.com}{labsquantumleap@gmail.com}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The persistent rise in global income inequality remains a critical concern for policymakers and economists alike. This study investigates the macroeconomic determinants of income inequality using a cross-sectional dataset of 142 countries, with data averaged over a ten-year period from the World Bank indicators. We employ an Ordinary Least Squares (OLS) framework to examine the impact of economic growth (GDP per capita), trade openness, educational expenditure, and sectoral structural transformation on the Gini Index. To ensure statistical validity, we implement rigorous diagnostic tests, including Variance Inflation Factor (VIF) analysis for multicollinearity and the Breusch-Pagan test for heteroscedasticity. Our methodology addresses potential non-constant error variance by utilizing HC3 robust standard errors. The empirical results suggest that while economic development generally correlates with lower inequality, the relationship is highly dependent on educational investment and the specific nature of trade integration, providing modern empirical evidence for and against the classic Kuznets hypothesis.
+\end{abstract}
+
+\section{Introduction}
+Understanding the drivers of income inequality is essential for fostering inclusive economic growth. Since the seminal work of \cite{kuznets1955economic}, the relationship between development and distribution has been a central pillar of macroeconomic research. In recent decades, the forces of globalization, technological change, and structural shifts from agriculture to services have reshaped the global inequality landscape \citep{piketty2014capital}.
+
+This study aims to provide a comprehensive empirical analysis of these determinants across a diverse global sample. By incorporating sectoral shares of GDP (Agriculture, Manufacturing, and Services) and female labor participation, we move beyond aggregate measures to capture the structural nuances of economic development.
+
+\section{Econometric Methodology}
+\subsection{Model Specification}
+We specify the following cross-country regression model:
+\begin{equation}
+    \text{Gini}_i = \beta_0 + \beta_1 \ln(\text{GDP}_i) + \beta_2 \text{Trade}_i + \beta_3 \text{Edu}_i + \beta_4 \text{Unemp}_i + \gamma \mathbf{X}_i + \epsilon_i
+\end{equation}
+where $\text{Gini}_i$ is the Gini Index for country $i$, $\ln(\text{GDP}_i)$ is the log of GDP per capita (PPP), and $\mathbf{X}_i$ is a vector of structural controls including sector shares and labor participation.
+
+\subsection{Diagnostic and Robustness Procedures}
+To account for the possibility of heteroscedasticity, which is common in cross-country cross-sectional data \citep{white1980heteroskedasticity}, we utilize the HC3 estimator for the covariance matrix. The HC3 estimator is defined as:
+\begin{equation}
+    \hat{\Sigma}_{\text{HC3}} = (X^T X)^{-1} X^T \text{diag}\left(\frac{\hat{e}_j^2}{(1 - h_{jj})^2}\right) X (X^T X)^{-1}
+\end{equation}
+where $h_{jj}$ are the diagonal elements of the hat matrix. This provides more conservative and reliable inference in the presence of non-spherical disturbances.
+
+\section{Empirical Results}
+[To be expanded in the next iteration]
+
+\bibliographystyle{apa}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[authoryear]{natbib}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% --- Custom Commands ---
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\text{Var}}
+\newcommand{\Cov}{\text{Cov}}
+
+% --- Title Information ---
+\title{Title of the Research Paper}
+\author{Sambit Mishra\thanks{XIM University, Bhubaneswar. Email: \href{mailto:labsquantumleap@gmail.com}{labsquantumleap@gmail.com}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper presents a rigorous quantitative analysis of [Research Topic]. We find that [Key Result] persists even after controlling for [Control Variables] and accounting for realistic transaction costs. Our results are robust across multiple market regimes and suggest that [Economic Intuition].
+\end{abstract}
+
+\section{Introduction}
+Quant finance is undergoing a paradigm shift...
+
+\section{Literature Review}
+[To be filled by DR-TF]
+
+\section{Data and Methodology}
+We utilize data from [Source] spanning [Period]...
+
+\section{Empirical Results}
+Our primary findings are summarized in Table \ref{tab:results}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Portfolio Performance Metrics}
+    \begin{tabular}{lSSS}
+        \toprule
+        Metric & {Strategy} & {Benchmark} & {Diff} \\
+        \midrule
+        Sharpe Ratio & 2.43 & 0.85 & 1.58 \\
+        Max Drawdown (\%) & -7.43 & -15.20 & 7.77 \\
+        Annualized Return (\%) & 42.0 & 12.5 & 29.5 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:results}
+\end{table}
+
+\section{Robustness Checks}
+[To be filled by SQS-MR]
+
+\section{Conclusion}
+The evidence presented suggests...
+
+\bibliographystyle{apa}
+\bibliography{references}
+
+\end{document}
