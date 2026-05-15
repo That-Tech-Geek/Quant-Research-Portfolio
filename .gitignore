@@ -1,0 +1,41 @@
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.gz
+*.fdb_latexmk
+*.fls
+*.synctex(busy)
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Data
+*.csv
+*.json
+*.parquet
+!MANIFEST.md
+!STATUS.md
